@@ -57,6 +57,9 @@ export class ContextMenuService {
       right: 0,
       top: 0,
       width: 0,
+      x: 0,
+      y: 0,
+      toJSON: () => { return ''; }
     })
   };
 
@@ -77,6 +80,9 @@ export class ContextMenuService {
         right: mouseEvent.clientX,
         top: mouseEvent.clientY,
         width: 0,
+        x: mouseEvent.x,
+        y: mouseEvent.y,
+        toJSON: () => { return ''; }
       });
       this.closeAllContextMenus({ eventType: 'cancel', event });
       const positionStrategy = this.overlay.position()

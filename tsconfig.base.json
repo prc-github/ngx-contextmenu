@@ -25,13 +25,6 @@
       ]
     }
   },
-  "files": [
-    "lib/ngx-contextmenu"
-  ],
   "compileOnSave": false,
-  "buildOnSave": false,
-  "angularCompilerOptions": {
-    "skipTemplateCodegen": true,
-    "enableIvy": false
-  }
+  "buildOnSave": false
 }
