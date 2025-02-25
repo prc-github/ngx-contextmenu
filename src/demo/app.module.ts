@@ -30,7 +30,7 @@ import { ChildTwoComponent } from './child2.component';
           component: ChildOneComponent,
         },
       ],
-      { relativeLinkResolution: 'legacy' }
+      {}
     ),
   ],
   providers: [

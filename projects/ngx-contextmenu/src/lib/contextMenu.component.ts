@@ -35,9 +35,9 @@ export interface MouseLocation {
 }
 
 @Component({
-  encapsulation: ViewEncapsulation.None,
-  selector: 'context-menu',
-  styles: [`
+    encapsulation: ViewEncapsulation.None,
+    selector: 'context-menu',
+    styles: [`
     .cdk-overlay-container {
       position: fixed;
       z-index: 1000;
@@ -53,7 +53,8 @@ export interface MouseLocation {
       box-sizing: border-box;
     }
   `],
-  template: ` `,
+    template: ` `,
+    standalone: false
 })
 export class ContextMenuComponent implements OnDestroy {
   @Input() public menuClass = "";

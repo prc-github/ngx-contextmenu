@@ -2,8 +2,8 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ContextMenuService, ContextMenuComponent } from 'ngx-contextmenu';
 
 @Component({
-  selector: 'ngx-context-menu-demo',
-  styles: [`
+    selector: 'ngx-context-menu-demo',
+    styles: [`
 .dashboardContainer {
 width: 100%;
 height: 100%;
@@ -20,7 +20,8 @@ width: 100%; }
 overflow: auto;
 position: absolute; }
 `],
-  templateUrl: './app.component.html',
+    templateUrl: './app.component.html',
+    standalone: false
 })
 export class AppComponent {
 

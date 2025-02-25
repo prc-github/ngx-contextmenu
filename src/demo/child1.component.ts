@@ -2,8 +2,8 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'child-one',
-  template: `
+    selector: 'child-one',
+    template: `
     <h3>Routing One</h3>
     <ul>
       <li *ngFor="let item of items" [contextMenu]="routingMenu" [contextMenuSubject]="item">Right Click: {{item?.name}}</li>
@@ -13,7 +13,8 @@ import { Component, OnInit } from '@angular/core';
         Go!
       </ng-template>
     </context-menu>
-  `
+  `,
+    standalone: false
 })
 
 export class ChildOneComponent {

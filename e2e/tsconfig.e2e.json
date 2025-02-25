@@ -5,11 +5,11 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "lib": [
-      "es2016"
+      "ES2022"
     ],
     "outDir": "../out-tsc/e2e",
     "module": "commonjs",
-    "target": "es5",
+    "target": "ES2022",
     "types":[
       "jasmine",
       "node"

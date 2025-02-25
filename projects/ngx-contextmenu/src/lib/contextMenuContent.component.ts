@@ -35,9 +35,9 @@ export interface ILinkConfig {
 const ARROW_LEFT_KEYCODE = 37;
 
 @Component({
-  selector: 'context-menu-content',
-  styles: [
-    `
+    selector: 'context-menu-content',
+    styles: [
+        `
       .passive {
         display: block;
         padding: 3px 20px;
@@ -51,8 +51,8 @@ const ARROW_LEFT_KEYCODE = 37;
         float: right;
       }
     `
-  ],
-  template: `
+    ],
+    template: `
     <div
       class="dropdown open show ngx-contextmenu"
       [ngClass]="menuClass"
@@ -105,7 +105,8 @@ const ARROW_LEFT_KEYCODE = 37;
         </li>
       </ul>
     </div>
-  `
+  `,
+    standalone: false
 })
 export class ContextMenuContentComponent
   implements OnInit, OnDestroy, AfterViewInit {

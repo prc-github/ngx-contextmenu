@@ -3,19 +3,20 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "your-awesome-library": {
+    "ngx-contextmenu-demo": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/demo",
+            "outputPath": {
+              "base": "dist/demo"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "assets": [
               "src/assets",
               "src/favicon.ico"
@@ -25,12 +26,11 @@
             ],
             "scripts": [],
             "aot": false,
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "src/main.ts"
           },
           "configurations": {
             "production": {
@@ -40,8 +40,6 @@
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -55,18 +53,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "your-awesome-library:build"
+            "buildTarget": "ngx-contextmenu-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "your-awesome-library:build:production"
+              "buildTarget": "ngx-contextmenu-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "your-awesome-library:build"
+            "buildTarget": "ngx-contextmenu-demo:build"
           }
         },
         "test": {
@@ -74,7 +72,7 @@
           "options": {
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
@@ -98,7 +96,7 @@
         }
       }
     },
-    "your-awesome-library-e2e": {
+    "ngx-contextmenu-demo-e2e": {
       "root": "",
       "sourceRoot": "",
       "projectType": "application",
@@ -107,7 +105,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "your-awesome-library:serve"
+            "devServerTarget": "ngx-contextmenu-demo:serve"
           }
         },
         "lint": {
@@ -162,7 +160,6 @@
       }
     }
   },
-  "defaultProject": "your-awesome-library",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "yal",

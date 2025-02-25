@@ -2,9 +2,9 @@ import { Highlightable } from '@angular/cdk/a11y';
 import { Directive, ElementRef, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
 
 @Directive({
-  /* tslint:disable:directive-selector-type */
-  selector: '[contextMenuItem]',
-  /* tslint:enable:directive-selector-type */
+    /* tslint:disable:directive-selector-type */
+    selector: '[contextMenuItem]',
+    standalone: false
 })
 export class ContextMenuItemDirective implements Highlightable {
   @Input() public subMenu: any;
