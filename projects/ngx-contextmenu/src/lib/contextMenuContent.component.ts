@@ -296,12 +296,12 @@ export class ContextMenuContentComponent
     }
   }
 
-  private cancelEvent(event): void {
+  private cancelEvent(event?: KeyboardEvent): void {
     if (!event) {
       return;
     }
 
-    const target: HTMLElement = event.target;
+    const target = event.target as HTMLElement;
     if (
       ['INPUT', 'TEXTAREA', 'SELECT'].indexOf(target.tagName) > -1 ||
       target.isContentEditable

@@ -141,7 +141,7 @@ export class ContextMenuService {
     subscriptions.add(contextMenuContent.instance.closeLeafMenu.asObservable()
       .subscribe(closeLeafMenuEvent => this.destroyLeafMenu(closeLeafMenuEvent)));
     subscriptions.add(contextMenuContent.instance.openSubMenu.asObservable()
-      .subscribe((subMenuEvent: IContextMenuContext) => {
+      .subscribe((subMenuEvent) => {
         this.destroySubMenus(contextMenuContent.instance);
         if (!subMenuEvent.contextMenu) {
           contextMenuContent.instance.isLeaf = true;
