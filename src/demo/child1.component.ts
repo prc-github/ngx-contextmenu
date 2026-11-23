@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'child-one',
@@ -16,6 +16,7 @@ import { Component, OnInit } from '@angular/core';
       </ng-template>
     </context-menu>
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 

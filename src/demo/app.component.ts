@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { ContextMenuService, ContextMenuComponent } from 'ngx-contextmenu';
 
 @Component({
@@ -21,6 +21,7 @@ overflow: auto;
 position: absolute; }
 `],
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AppComponent {

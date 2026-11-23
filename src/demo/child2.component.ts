@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
       </ng-template>
     </context-menu>
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 

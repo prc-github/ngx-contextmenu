@@ -1,18 +1,19 @@
 import {
-    ChangeDetectorRef,
-    Component,
-    ContentChildren,
-    ElementRef,
-    EventEmitter,
-    HostListener,
-    Inject,
-    Input,
-    OnDestroy,
-    Optional,
-    Output,
-    QueryList,
-    ViewChild,
-    ViewEncapsulation,
+  ChangeDetectorRef,
+  Component,
+  ContentChildren,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Inject,
+  Input,
+  OnDestroy,
+  Optional,
+  Output,
+  QueryList,
+  ViewChild,
+  ViewEncapsulation,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
@@ -54,6 +55,7 @@ export interface MouseLocation {
     }
   `],
     template: ` `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ContextMenuComponent implements OnDestroy {

@@ -15,7 +15,8 @@ import {
   Output,
   QueryList,
   ViewChild,
-  ViewChildren
+  ViewChildren,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ContextMenuItemDirective } from './contextMenu.item.directive';
@@ -108,6 +109,7 @@ const ARROW_LEFT_KEYCODE = 37;
       </ul>
     </div>
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ContextMenuContentComponent
