@@ -41,7 +41,7 @@
   "private": false,
   "devDependencies": {
     "@angular-devkit/build-angular": "^21.2.31",
-    "@angular/cdk": "^20.2.14",
+    "@angular/cdk": "^21.2.14",
     "@angular/cli": "^21.2.31",
     "@angular/common": "^21.2.26",
     "@angular/compiler": "^21.2.26",
