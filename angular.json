@@ -67,29 +67,11 @@
             "buildTarget": "ngx-contextmenu-demo:build"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "karmaConfig": "./karma.conf.js",
-            "polyfills": ["zone.js", "zone.js/testing"],
-            "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "assets": [
-              "src/assets",
-              "src/favicon.ico"
-            ]
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "src/tsconfig.app.json"
             ],
             "exclude": []
           }
@@ -126,7 +108,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular/build:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-contextmenu/tsconfig.lib.json",
             "project": "projects/ngx-contextmenu/ng-package.json"
@@ -138,11 +120,11 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
-            "main": "projects/ngx-contextmenu/src/test.ts",
+            "buildTarget": "ngx-contextmenu:build",
             "tsConfig": "projects/ngx-contextmenu/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-contextmenu/karma.conf.js"
+            "polyfills": []
           }
         },
         "lint": {
